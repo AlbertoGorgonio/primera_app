@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'calculadora_page.dart'; // Importante: asegúrate de tener la página de la calculadora importada
+
 class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -105,6 +107,18 @@ class SecondPage extends StatelessWidget {
                     );
                   },
                   child: Text('Más Información'),
+                ),
+              ),
+              SizedBox(height: 10),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CalculadoraPage()),
+                    );
+                  },
+                  child: Text('Calculadora de Diabetes'),
                 ),
               ),
             ],
